@@ -4,18 +4,22 @@ import com.watsmeow.VendingMachine.dao.VendingMachineAuditDao;
 import com.watsmeow.VendingMachine.dao.VendingMachineDao;
 import com.watsmeow.VendingMachine.dao.VendingMachinePersistenceException;
 import com.watsmeow.VendingMachine.dto.Item;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class VendingMachineServiceLayerImpl implements VendingMachineServiceLayer {
 
-    VendingMachineDao dao;
+    private VendingMachineDao dao;
 
     // Adding a member file of the audit dao
     private VendingMachineAuditDao auditDao;
 
     // Service layer implementation constructor initializes the audit dao
+    @Autowired
     public VendingMachineServiceLayerImpl(VendingMachineDao dao, VendingMachineAuditDao auditDao) {
         this.auditDao = auditDao;
         this.dao = dao;

@@ -1,4 +1,4 @@
-Milky Way::1.25::9
+Milky Way::1.25::8
 Chips::2.75::10
 Snickers::1.5::10
 Soda::3::10

@@ -11,14 +11,18 @@ package com.watsmeow.VendingMachine.ui;
 * - use the methods for getting user input from the UserIOConsoleImpl */
 
 import com.watsmeow.VendingMachine.dto.Item;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.List;
 
+@Component
 public class VendingMachineView {
 
     private UserIO io;
 
+    @Autowired
     public VendingMachineView(UserIO io) {this.io = io;}
 
     public void printOptions(List<Item> itemList) {

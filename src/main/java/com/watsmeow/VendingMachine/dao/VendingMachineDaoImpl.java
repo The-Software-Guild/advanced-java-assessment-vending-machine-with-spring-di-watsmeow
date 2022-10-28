@@ -10,6 +10,8 @@ package com.watsmeow.VendingMachine.dao;
 * - declare a hashmap that stores items in local memory
 * - add and remove objects from memory, edit objects in memory */
 
+import org.springframework.stereotype.Component;
+
 
 import com.watsmeow.VendingMachine.dto.Item;
 
@@ -18,6 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Component
 public class VendingMachineDaoImpl implements VendingMachineDao {
 
     // Hashmap to store snacks in when unmarshalled from .txt file

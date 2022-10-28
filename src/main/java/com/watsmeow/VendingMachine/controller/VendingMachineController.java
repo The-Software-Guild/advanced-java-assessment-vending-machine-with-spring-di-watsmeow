@@ -14,11 +14,14 @@ import com.watsmeow.VendingMachine.service.VendingMachineDataValidationException
 import com.watsmeow.VendingMachine.service.VendingMachineDuplicateIdException;
 import com.watsmeow.VendingMachine.service.VendingMachineServiceLayer;
 import com.watsmeow.VendingMachine.ui.VendingMachineView;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
 
+@Component
 public class VendingMachineController {
 
     // Assigning the view into a variable
@@ -28,6 +31,7 @@ public class VendingMachineController {
     private VendingMachineServiceLayer service;
 
     // Controller constructor taking in service and view as parameters
+    @Autowired
     public VendingMachineController(VendingMachineServiceLayer service, VendingMachineView view) {
         this.service = service;
         this.view = view;

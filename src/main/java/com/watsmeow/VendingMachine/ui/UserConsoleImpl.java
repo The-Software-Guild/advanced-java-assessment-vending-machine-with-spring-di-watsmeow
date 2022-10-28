@@ -1,5 +1,7 @@
 package com.watsmeow.VendingMachine.ui;
 
+import org.springframework.stereotype.Component;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
@@ -8,6 +10,7 @@ import java.util.Scanner;
 * This class implements the UserIO by defining the public methods that  print out information to the user and
 * take in the user's input
 * */
+@Component
 public class UserConsoleImpl implements UserIO {
     @Override
     public void print(String msg) {
